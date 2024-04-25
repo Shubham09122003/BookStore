@@ -1,17 +1,19 @@
 # Installation and Running Instructions
 ## Step 1: Clone the Repository
-git clone <repository-url>
-
+```
+git clone https://github.com/Shubham09122003/BookStore/
+```
 ## Step 2: Install Dependencies
 Navigate to the backend directory:
-
+```
 cd book-inventory-management-system/backend
 npm install
+```
 Navigate to the frontend directory:
-
+```
 cd ../frontend
 npm install
-
+```
 ## Step 3: Set Up Environment Variables
 Create a .env file in the backend directory.
 Define environment variables such as database connection string, JWT secret, and any other required configurations in the .env file.
@@ -23,16 +25,16 @@ Seed the database with initial data if necessary.
 
 ## Step 5: Run the Backend Server
 Navigate to the backend directory:
-
+```
 cd backend
 npm start
-
+````
 ## Step 6: Run the Frontend Application
 Navigate to the frontend directory:
-
+```
 cd frontend
 npm start
-
+```
 ## Step 7: Access the Application
 Open your web browser and navigate to http://localhost:3000 (or the specified port if different).
 You should see the login page or the homepage of the Book Inventory Management System.
