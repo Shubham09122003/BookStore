@@ -6,7 +6,7 @@ git clone https://github.com/Shubham09122003/BookStore/
 ## Step 2: Install Dependencies
 Navigate to the backend directory:
 ```
-cd book-inventory-management-system/backend
+cd backend
 npm install
 ```
 Navigate to the frontend directory:
