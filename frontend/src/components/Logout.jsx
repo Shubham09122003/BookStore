@@ -17,7 +17,7 @@ const Logout = () => {
   };
 
   return (
-    <div className="h-screen bg-teal-100 flex items-center justify-center">
+    <div className="h-screen bg-pink-100 flex items-center justify-center">
       <div className="bg-white shadow-lg sm:rounded-2xl sm:p-12">
         <div>
           <div>
@@ -26,13 +26,13 @@ const Logout = () => {
             </h1>
             <div className="flex flex-row justify-center items-center gap-20">     
       <button
-        className="bg-blue-700 px-3 py-1 text-white rounded mt-5"
+        className="bg-red-700 px-3 py-1 text-white rounded mt-5"
         onClick={handleLogout}
       >
         Yes
       </button>
       <button
-        className="bg-blue-700 px-3 py-1 text-white rounded mt-5"
+        className="bg-red-700 px-3 py-1 text-white rounded mt-5"
         onClick={handleLogout}
       >
         No

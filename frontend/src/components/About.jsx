@@ -5,7 +5,7 @@ const About = () => {
     <div className='px-4 my-12 mt-20'>
       <h2 className='mb-8 text-3xl font-bold text-center'>About Us</h2>
       <div className="max-w-3xl mx-auto text-lg leading-relaxed">
-        <p>Welcome to <span className="font-bold text-blue-600">BookHaven</span>, your one-stop destination for all things book-related!</p>
+        <p>Welcome to <span className="font-bold text-red-600">BookHaven</span>, your one-stop destination for all things book-related!</p>
         <p className="mt-4">At BookHaven, we believe in the power of storytelling and the magic of books to transport us to different worlds, inspire our imagination, and enrich our lives. With a passion for literature and a commitment to fostering a vibrant reading community, we strive to provide book lovers with an exceptional shopping experience and a diverse selection of titles catering to every interest and taste.</p>
         <p className="mt-4">Our journey began with a simple yet profound love for books. Founded by avid readers and bibliophiles, BookHaven was born out of a shared vision to create a welcoming space where fellow book enthusiasts could come together to discover new literary treasures, connect with fellow readers, and celebrate the joy of reading.</p>
         <p className="mt-4">What sets us apart is our unwavering dedication to curating a thoughtfully curated collection of books spanning genres, cultures, and perspectives. From timeless classics to contemporary bestsellers, from niche genres to hidden gems, we take pride in offering a wide range of titles to suit every reader's preferences.</p>

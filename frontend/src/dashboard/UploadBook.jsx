@@ -153,7 +153,7 @@ const UploadBook = () => {
         required />
       </div>
 
-      <Button type="submit" className='mt-5'>Upload Book</Button>
+      <Button type="submit" className='mt-5 bg-red-700'>Upload Book</Button>
     </form>
       
     </div>

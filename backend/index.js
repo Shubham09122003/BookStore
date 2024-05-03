@@ -1,8 +1,6 @@
-
-
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 5000
+const port = 5000;
 const cors = require('cors')
 require('dotenv').config();
 
@@ -12,14 +10,13 @@ app.use(express.json());
 
 
 app.get('/',(req,res)=>{
-    res.send('Hello World')
+    res.send('Book Store Server is running here ...😊')
 })
 
 
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = process.env.MONGODB_URI;
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -30,13 +27,10 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    // Connect the client to the server
     await client.connect();
-
-    //create a collection for the documents
     const bookCollections = client.db('Book-Heaven').collection('books');
 
-    //insert a book to the database : post method 
+    //insert book
     app.post('/upload-book', async(req,res)=>{
         const data = req.body; 
         const result = await bookCollections.insertOne(data);
@@ -44,14 +38,14 @@ async function run() {
     });
 
 
-    //get all the books from the database
+    //get all the books
     app.get('/all-books',async(req,res)=>{
         const books = bookCollections.find();
         const result= await books.toArray();
         res.send(result);
     })
     
-    //update a book data
+    //update a book
     app.patch('/book/:id', async(req,res)=>{
         const id = req.params.id;
         // console.log(id);
@@ -72,7 +66,7 @@ async function run() {
     })
 
 
-    //delete a book data
+    //delete a book
     app.delete('/book/:id' , async(req,res)=>{
         const id = req.params.id;
         const filter = {_id : new ObjectId(id)};
@@ -103,21 +97,12 @@ async function run() {
         res.send(result);
     })
     
-
-
-
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
     console.log("Book-store is now connected to database");
   } finally {
-    // Ensures that the client will close when you finish/error
-    // await client.close();
-    //since we dont want it to get closed after we finish we commented it
+    //so that server donot crash if error occurs 
   }
 }
 run().catch(console.dir);
-
-
 
 app.listen(port,()=>{
     console.log(`listening on port: ${port}`);

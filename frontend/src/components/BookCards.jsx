@@ -53,7 +53,7 @@ const BookCards = ({headline,books}) => {
                 <Link to={`/book/${book._id}`}>
                     <div className='relative'>
                         <img src={book.imageURL} alt="" />
-                        <div className='absolute top-3 right-3 bg-blue-600 hover:bg-black p-2 rounded'>
+                        <div className='absolute top-3 right-3 bg-red-600 hover:bg-black p-2 rounded'>
                             <FaBookReader className='w-4 h-4 text-white'/>
                         </div>
                     </div>

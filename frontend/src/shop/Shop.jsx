@@ -24,7 +24,7 @@ const Shop = () => {
               {book.bookDescription.slice(0,100)}
             </p>
 
-            <button className='bg-blue-700 hover:bg-black text-white font-semibold py-2 rounded'>Read More</button>
+            <button className='bg-pink-700 hover:bg-black text-white font-semibold py-2 rounded'>Read More</button>
           </Card>)
         }
       </div>
